@@ -1,1 +1,1 @@
-web: gunicorn my-pile-of-shame.wsgi
+web: gunicorn pile_shame.wsgi
