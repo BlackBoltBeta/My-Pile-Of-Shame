@@ -18,8 +18,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-#ALLOWED_HOSTS = ['my-pile-of-shame.herokuapp.com', 'localhost']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['my-pile-of-shame.herokuapp.com', 'localhost']
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
