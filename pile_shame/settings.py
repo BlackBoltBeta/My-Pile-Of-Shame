@@ -22,7 +22,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['my-pile-of-shame.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['my-pile-of-shame-43d33f4851bf.herokuapp.com', 'localhost']
 # ALLOWED_HOSTS = ['*']
 
 
