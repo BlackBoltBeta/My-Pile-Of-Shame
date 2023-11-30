@@ -8,7 +8,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 
 class PostList(generic.ListView):
     model = Post
-    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    queryset = Post.objects.filter(status=1).order_by("-created_on").prefetch_related('category')
     template_name = "index.html"
     paginate_by = 6
 

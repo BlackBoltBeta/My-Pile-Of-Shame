@@ -18,7 +18,9 @@
                                 <img class="card-img-top" src="{{ post.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    {% for category in post.category.all %}
+                                    <p class="author">{{ category.name }}</p>
+                                    {% endfor %}
                                 </div>
                             </div>
                             <a href="{% url 'hobbycentre:post_detail' post.slug %}" class="post-link">
