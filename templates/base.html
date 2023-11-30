@@ -33,7 +33,10 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'hobbycentre:home' %}">My Pile of Shame</a>
+                    </li>
+                    <li class="nav-item">
+                        
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -48,9 +51,7 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    My Pile of Shame
-                </span>
+
             </div>
         </div>
     </nav>

@@ -75,6 +75,12 @@
                 {% endfor %}
             </div>
         </div>
+        <!-- Add this button where you want the delete button to appear -->
+{% if user.is_authenticated and user.is_staff %}
+<a href="{% url 'hobbycentre:edit_post' post.slug %}" class="btn btn-warning">Edit Post</a>
+<a href="{% url 'hobbycentre:delete_post' post.slug %}" class="btn btn-danger">Delete Post</a>
+{% endif %}
+
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
                 <!-- For later -->

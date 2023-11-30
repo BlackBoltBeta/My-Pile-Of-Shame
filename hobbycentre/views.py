@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
+from django.contrib.admin.views.decorators import staff_member_required
 
 
 class PostList(generic.ListView):
@@ -63,3 +64,21 @@ class PostDetail(View):
                 "liked": liked
             },
         )
+
+
+@staff_member_required
+def post_edit(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    form = PostForm(instance=post)
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect("hobbycentre:post_detail", slug=post.slug)
+    return render(request, "edit_post.html", {"post": post, "form": form})
+
+@staff_member_required
+def post_delete(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    post.delete()
+    return redirect("hobbycentre:home")
