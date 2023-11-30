@@ -1,12 +1,14 @@
 from . import views
 from django.urls import path
 from django.contrib import admin
+from .views import PostCreate
 
 app_name = 'hobbycentre'
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('admin/', admin.site.urls),
+    path('create/', PostCreate.as_view(), name='create_post'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('<slug:slug>/edit/', views.post_edit, name='edit_post'),
     path('<slug:slug>/delete/', views.post_delete, name='delete_post'),

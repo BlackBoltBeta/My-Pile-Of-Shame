@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import Post
 from .forms import CommentForm, PostForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.admin.views.decorators import staff_member_required
 
 
@@ -82,3 +83,21 @@ def post_delete(request, slug):
     post = get_object_or_404(Post, slug=slug)
     post.delete()
     return redirect("hobbycentre:home")
+
+
+class PostCreate(LoginRequiredMixin, View):
+    template_name = 'create_post.html'
+    form_class = PostForm
+
+    def get(self, request, *args, **kwargs):
+        form = self.form_class()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            return redirect('hobbycentre:post_detail', slug=post.slug)
+        return render(request, self.template_name, {'form': form})
