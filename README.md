@@ -48,13 +48,13 @@ The main reasons to build this site are that I started collecting a couple of ye
 
 - #### Homepage
 
-  ![Homepage]()
+  ![Homepage](media/readme_assets/main_page01.png)
 
   - The homepage is where the user first lands and it shows a list of posts in order of latest to oldest created. 
 
 - #### Signup Page
 
-  ![Signup Page]()
+  ![Signup Page](media/readme_assets/sign_in01.png)
 
   - The Signup page consists of a form to be completed in order to sign up and create an account.
 
@@ -64,7 +64,7 @@ The main reasons to build this site are that I started collecting a couple of ye
 
 - #### Login Page
 
-  ![Login Page]()
+  ![Login Page](media/readme_assets/sign_in01.png)
 
   - The Login page consists of a form to be completed in order to login to an existing account.
 
@@ -74,11 +74,11 @@ The main reasons to build this site are that I started collecting a couple of ye
 
 - #### Create new post
 
-  ![New Post Page]()
+  ![New Post Page](media/readme_assets/new_post01.png)
 
 - #### Footer
 
-  ![Footer]()
+  ![Footer](media/readme_assets/footer01.png)
 
   - The footer appears in the same format on all pages this allows for consistency throughout the site.
   - It contains social media links.
