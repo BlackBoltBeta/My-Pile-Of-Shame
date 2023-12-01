@@ -18,12 +18,12 @@ if os.path.exists('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['my-pile-of-shame-43d33f4851bf.herokuapp.com', 'localhost']
-# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['my-pile-of-shame-43d33f4851bf.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

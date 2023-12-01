@@ -1,5 +1,5 @@
 body {
-    background-color: #676767;
+    background-color: #b7b1b1;
 }
 
 .thin {
@@ -11,7 +11,7 @@ body {
 }
 
 .main-bg {
-    background-color: rgb(229, 155, 6), 250, 249);
+    background-color: rgb(229, 225, 218);
 }
 
 .card {
@@ -28,7 +28,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: rgb(142, 5, 40);
+    background-color: #8e2805;
 }
 
 .author {
@@ -78,7 +78,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: rgb(32, 166, 8), 232, 16);
+    color: rgb(232, 239, 231);
 }
 
 .post-title {
@@ -113,15 +113,7 @@ body {
     text-decoration: underline;
 }
 
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
+.page-link {
+    color: #b7b1b1;
+    background-color: #082647;
 }
